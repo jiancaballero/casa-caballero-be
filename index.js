@@ -4,7 +4,7 @@ const app = express();
 const cors = require("cors");
 const corsOptions = {
   origin: "https://casa-caballero-be.herokuapp.com/",
-  credentials: true,
+  credentials: false,
   optionSuccessStatus: 200,
 };
 app.use(cors(corsOptions));
