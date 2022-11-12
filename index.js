@@ -3,7 +3,7 @@ const port = process.env.PORT || 3000
 const app = express();
 const cors = require("cors");
 const corsOptions = {
-  origin: "https://casacaballero-be.herokuapp.com/",
+  origin: "http://localhost:3000",
   credentials: false,
   optionSuccessStatus: 200,
 };
