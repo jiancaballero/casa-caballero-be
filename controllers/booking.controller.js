@@ -16,8 +16,8 @@ const transporter = nodemailer.createTransport({
   },
 });
 const addBooking = (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Credentials", "true");
+  res.header("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Credentials", "false");
   res.setHeader("Access-Control-Max-Age", "1800");
   res.setHeader("Access-Control-Allow-Headers", "content-type");
   res.setHeader(
@@ -110,8 +110,8 @@ const addBooking = (req, res) => {
   }
 };
 const getBooking = (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Credentials", "true");
+  res.header("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Credentials", "false");
   res.setHeader("Access-Control-Max-Age", "1800");
   res.setHeader("Access-Control-Allow-Headers", "content-type");
   res.setHeader(
@@ -133,8 +133,8 @@ const getBooking = (req, res) => {
   }
 };
 const cancelBooking = (req, res) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Credentials", "true");
+  res.header("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Credentials", "false");
   res.setHeader("Access-Control-Max-Age", "1800");
   res.setHeader("Access-Control-Allow-Headers", "content-type");
   res.setHeader(
