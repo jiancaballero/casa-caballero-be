@@ -16,14 +16,14 @@ const transporter = nodemailer.createTransport({
   },
 });
 const addBooking = (req, res) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Credentials", "false");
-  res.setHeader("Access-Control-Max-Age", "1800");
-  res.setHeader("Access-Control-Allow-Headers", "content-type");
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "PUT, POST, GET, DELETE, PATCH, OPTIONS"
-  );
+  // res.header("Access-Control-Allow-Origin", "*");
+  // res.setHeader("Access-Control-Allow-Credentials", "false");
+  // res.setHeader("Access-Control-Max-Age", "1800");
+  // res.setHeader("Access-Control-Allow-Headers", "content-type");
+  // res.setHeader(
+  //   "Access-Control-Allow-Methods",
+  //   "PUT, POST, GET, DELETE, PATCH, OPTIONS"
+  // );
   const mailOptions = {
     from: process.env.EMAIL,
     to: req.body.guest_details.email,
@@ -110,14 +110,14 @@ const addBooking = (req, res) => {
   }
 };
 const getBooking = (req, res) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Credentials", "false");
-  res.setHeader("Access-Control-Max-Age", "1800");
-  res.setHeader("Access-Control-Allow-Headers", "content-type");
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "PUT, POST, GET, DELETE, PATCH, OPTIONS"
-  );
+  // res.header("Access-Control-Allow-Origin", "*");
+  // res.setHeader("Access-Control-Allow-Credentials", "false");
+  // res.setHeader("Access-Control-Max-Age", "1800");
+  // res.setHeader("Access-Control-Allow-Headers", "content-type");
+  // res.setHeader(
+  //   "Access-Control-Allow-Methods",
+  //   "PUT, POST, GET, DELETE, PATCH, OPTIONS"
+  // );
   try {
     Booking.findOne({ bk_code: { $eq: req.params.bk_code } })
       .populate("room")
@@ -133,14 +133,14 @@ const getBooking = (req, res) => {
   }
 };
 const cancelBooking = (req, res) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Credentials", "false");
-  res.setHeader("Access-Control-Max-Age", "1800");
-  res.setHeader("Access-Control-Allow-Headers", "content-type");
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "PUT, POST, GET, DELETE, PATCH, OPTIONS"
-  );
+  // res.header("Access-Control-Allow-Origin", "*");
+  // res.setHeader("Access-Control-Allow-Credentials", "false");
+  // res.setHeader("Access-Control-Max-Age", "1800");
+  // res.setHeader("Access-Control-Allow-Headers", "content-type");
+  // res.setHeader(
+  //   "Access-Control-Allow-Methods",
+  //   "PUT, POST, GET, DELETE, PATCH, OPTIONS"
+  // );
   const mailOptions = {
     from: process.env.EMAIL,
     to: req.body.email,

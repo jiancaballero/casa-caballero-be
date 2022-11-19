@@ -9,14 +9,14 @@ const Booking = require("../model/booking.model");
 
 // {check_in:{$gte:new Date(req.body.startDate)}},{check_in:{$lte:new Date(req.body.endDate)}}]}
 const getAvailableRooms = (req, res) => {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Credentials", "false");
-  res.setHeader("Access-Control-Max-Age", "1800");
-  res.setHeader("Access-Control-Allow-Headers", "content-type");
-  res.setHeader(
-    "Access-Control-Allow-Methods",
-    "PUT, POST, GET, DELETE, PATCH, OPTIONS"
-  );
+  // res.header("Access-Control-Allow-Origin", "*");
+  // res.setHeader("Access-Control-Allow-Credentials", "false");
+  // res.setHeader("Access-Control-Max-Age", "1800");
+  // res.setHeader("Access-Control-Allow-Headers", "content-type");
+  // res.setHeader(
+  //   "Access-Control-Allow-Methods",
+  //   "PUT, POST, GET, DELETE, PATCH, OPTIONS"
+  // );
   try {
     Booking.find({
       $and: [
