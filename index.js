@@ -2,12 +2,12 @@ const express = require("express");
 const port = process.env.PORT || 3000
 const app = express();
 const cors = require("cors");
-const corsOptions = {
-  origin: "http://localhost:3000",
-  credentials: false,
-  optionSuccessStatus: 200,
-};
-app.use(cors(corsOptions));
+// const corsOptions = {
+//   origin: "http://localhost:3000",
+//   credentials: false,
+//   optionSuccessStatus: 200,
+// };
+app.use(cors);
 
 // IMPORT BODYPARSER
 const bodyParser = require("body-parser");
